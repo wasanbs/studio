@@ -1,5 +1,5 @@
 {
-  "name": "studio",
+  "name": "bsportal",
   "version": "0.1.0",
   "private": true,
   "scripts": {
@@ -26,7 +26,7 @@
     "react-firebase-hooks": "^5.1.1",
     "firebaseui": "^6.1.0",
     "tailwind-merge": "^2.3.0",
-    "tailwindcss-animate": "^1.0.7"
+    "tailwindcss-animate": "^1.0.0"
   },
   "devDependencies": {
     "@types/node": "^20",
