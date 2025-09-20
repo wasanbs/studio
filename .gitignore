@@ -1,0 +1,12 @@
+# Folders to ignore
+.idx/
+node_modules/
+.next/
+
+# Other files to ignore
+.env
+.env.local
+.DS_Store
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
