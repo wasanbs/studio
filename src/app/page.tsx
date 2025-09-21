@@ -5,7 +5,7 @@ export default function Home() {
         <div className="flex flex-col items-center">
           <h1 className="text-4xl font-bold">BS Portal</h1>
           <p className="mt-4 text-center">
-            Welcome to your new application. The preview is now working correctly.
+            Welcome to your application. The preview is now working correctly.
           </p>
         </div>
       </div>

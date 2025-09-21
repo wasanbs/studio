@@ -51,6 +51,11 @@ env:
     availability:
       - BUILD
       - RUNTIME
+  - variable: NEXT_PUBLIC_GOOGLE_CLIENT_ID
+    value: "134599040444-2rmlu2m1vgvkcp52u46dj5saao9k89a4.apps.googleusercontent.com"
+    availability:
+      - BUILD
+      - RUNTIME
 
   # Grant access to secrets in Cloud Secret Manager.
   # See https://firebase.google.com/docs/app-hosting/configure#secret-parameters
