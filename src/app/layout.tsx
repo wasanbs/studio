@@ -5,7 +5,7 @@ import "./globals.css";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "BS Portal",
+  title: "BS Leave Portal",
   description: "Leave management portal for Busisoft",
 };
 
