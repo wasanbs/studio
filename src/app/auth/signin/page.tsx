@@ -3,14 +3,14 @@
 import { useState } from 'react';
 import { useRouter } from 'next/navigation';
 import { getAuth, signInWithEmailAndPassword } from 'firebase/auth';
-import firebaseApp from '../../../lib/firebase'; // Assuming your firebase init is here
+import { app } from '@/lib/firebase'; // Corrected import
 
 export default function SignInPage() {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const [error, setError] = useState<string | null>(null);
   const router = useRouter();
-  const auth = getAuth(firebaseApp);
+  const auth = getAuth(app);
 
   const handleSignIn = async (e: React.FormEvent) => {
     e.preventDefault();
