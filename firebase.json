@@ -6,8 +6,9 @@
       "**/.*",
       "**/node_modules/**"
     ],
-    "frameworksBackend": {
-      "region": "asia-southeast1"
+    "apphosting": {
+      "backendId": "bs-leave-portal-backend",
+      "region": "us-central1"
     }
   }
 }

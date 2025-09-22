@@ -2,58 +2,36 @@
 # See https://firebase.google.com/docs/app-hosting/configure#cloud-run
 runConfig:
   minInstances: 0
-  # maxInstances: 100
-  # concurrency: 80
-  # cpu: 1
-  # memoryMiB: 512
 
 # Environment variables and secrets.
 env:
-  # Configure environment variables.
-  # See https://firebase.google.com/docs/app-hosting/configure#user-defined-environment
+  # Public Firebase Configuration
   - variable: NEXT_PUBLIC_API_KEY
     value: "AIzaSyBysnrYT1rJFQQvuf18eU4b8_eUo943yBU"
-    availability:
-      - BUILD
-      - RUNTIME
+    availability: [BUILD, RUNTIME]
   - variable: NEXT_PUBLIC_AUTH_DOMAIN
     value: "bs-leave-portal.firebaseapp.com"
-    availability:
-      - BUILD
-      - RUNTIME
+    availability: [BUILD, RUNTIME]
   - variable: NEXT_PUBLIC_DATABASE_URL
     value: "https://bs-leave-portal-default-rtdb.asia-southeast1.firebasedatabase.app"
-    availability:
-      - BUILD
-      - RUNTIME
+    availability: [BUILD, RUNTIME]
   - variable: NEXT_PUBLIC_PROJECT_ID
     value: "bs-leave-portal"
-    availability:
-      - BUILD
-      - RUNTIME
+    availability: [BUILD, RUNTIME]
   - variable: NEXT_PUBLIC_STORAGE_BUCKET
     value: "bs-leave-portal.firebasestorage.app"
-    availability:
-      - BUILD
-      - RUNTIME
+    availability: [BUILD, RUNTIME]
   - variable: NEXT_PUBLIC_MESSAGING_SENDER_ID
     value: "134599040444"
-    availability:
-      - BUILD
-      - RUNTIME
+    availability: [BUILD, RUNTIME]
   - variable: NEXT_PUBLIC_APP_ID
     value: "1:134599040444:web:d1750e321c29370d80dfb9"
-    availability:
-      - BUILD
-      - RUNTIME
+    availability: [BUILD, RUNTIME]
   - variable: NEXT_PUBLIC_MEASUREMENT_ID
     value: "G-N3ZFD7PG73"
-    availability:
-      - BUILD
-      - RUNTIME
+    availability: [BUILD, RUNTIME]
   
-  # Grant access to secrets in Cloud Secret Manager.
-  # See https://firebase.google.com/docs/app-hosting/configure#secret-parameters
+  # Secrets referenced from Google Cloud Secret Manager
   - variable: GOOGLE_CLIENT_ID
     secret: GOOGLE_CLIENT_ID_SECRET
   - variable: GOOGLE_CLIENT_SECRET
@@ -62,3 +40,7 @@ env:
     secret: NEXTAUTH_SECRET_SECRET
   - variable: NEXTAUTH_URL
     secret: NEXTAUTH_URL_SECRET
+  - variable: GEMINI_API_KEY
+    secret: GEMINI_API_KEY_SECRET
+  - variable: GENERATIVE_LANGUAGE_API_KEY
+    secret: GENERATIVE_LANGUAGE_API_KEY_SECRET
