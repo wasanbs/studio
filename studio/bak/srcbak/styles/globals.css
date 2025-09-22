@@ -1,0 +1,78 @@
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 194 53% 92%;
+    --foreground: 224 23% 29%;
+    --card: 0 0% 100%;
+    --card-foreground: 224 23% 29%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 224 23% 29%;
+    --primary: 207 93% 48%;
+    --primary-foreground: 210 40% 98%;
+    --secondary: 210 40% 96.1%;
+    --secondary-foreground: 222.2 47.4% 11.2%;
+    --muted: 210 40% 96.1%;
+    --muted-foreground: 215.4 16.3% 46.9%;
+    --accent: 212 71% 65%;
+    --accent-foreground: 222.2 47.4% 11.2%;
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 210 40% 98%;
+    --border: 214.3 31.8% 91.4%;
+    --input: 214.3 31.8% 91.4%;
+    --ring: 207 93% 48%;
+    --radius: 1rem;
+  }
+
+  [type='text'],
+  input:where(:not([type])),
+  [type='email'],
+  [type='url'],
+  [type='password'],
+  [type='number'],
+  [type='date'],
+  [type='datetime-local'],
+  [type='month'],
+  [type='search'],
+  [type='tel'],
+  [type='time'],
+  [type='week'],
+  [multiple],
+  textarea,
+  select {
+    border-color: transparent;
+    background-color: hsl(var(--input));
+  }
+}
+
+body {
+  background: linear-gradient(to right, #e6f7ff, #b3e0ff) !important;
+}
+
+@keyframes float {
+	0% {
+		transform: translateY(0px);
+	}
+	50% {
+		transform: translateY(-20px);
+	}
+	100% {
+		transform: translateY(0px);
+	}
+}
+
+.animate-float {
+  animation: float 12s ease-in-out infinite;
+}
+
+.text-shadow {
+  text-shadow: rgba(0, 0, 0, 0.1) 0px 2px 4px;
+}
+
+/* This filter converts any image to the primary color */
+.logo-filter {
+  filter: brightness(0) saturate(100%) invert(39%) sepia(84%) saturate(1633%) hue-rotate(180deg) brightness(96%) contrast(93%);
+}
